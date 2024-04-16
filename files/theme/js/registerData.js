@@ -47,6 +47,9 @@ button.onclick = async (event) => {
   };
 
   console.log(data);
+
+  // if (data.fullName
+
   button.innerHTML = "Loading...";
 
   fetch('https://exptradezglobs-backend.vercel.app/api/register', {
@@ -58,12 +61,17 @@ button.onclick = async (event) => {
   })
   .then(response=> response.json())
     .then(response => {
-      localStorage.setItem('userId', JSON.stringify(response.data))
+       if(response.message === "email already in use"){
+        alert('email already in use');
+      } else{ 
+        localStorage.setItem('userId', JSON.stringify(response.data))
           sendSignUpEmail();
       console.log(response)
       const userId = JSON.parse(localStorage.getItem('userId'))
       console.log("Local User Id", userId);
-      window.location.href = `https://exptradezglobs-dashboard.vercel.app//#/${userId._id}`;
+      window.location.href = `https://exptradezglobs-dashboard.vercel.app/`;
+      }
+      
       
     })
     .catch((error) => {

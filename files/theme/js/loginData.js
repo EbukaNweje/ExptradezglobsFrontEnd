@@ -49,11 +49,13 @@ button.onclick = async (event) => {
       console.log(response)
       const userId = localStorage?.getItem('userId')
       console.log("Local User Id", userId);
-      if (response._id === '' || response._id === undefined){
-        alert('Please enter your valid credentials');
+      if (response.message === 'User have not been verified'){
+        window.location = `https://exptradezglobs-dashboard.vercel.app/`;
         console.log("object");
         return
-      }else{
+      }
+      
+      else{
         console.log("object2");
         sendLoginEmail()
         window.location = `https://exptradezglobs-dashboard.vercel.app/#/${userId}`;
