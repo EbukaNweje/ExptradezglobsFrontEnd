@@ -53,9 +53,7 @@ button.onclick = async (event) => {
         window.location = `https://exptradezglobs-dashboard.vercel.app/`;
         console.log("object");
         return
-      }
-      
-      else{
+      }else{
         console.log("object2");
         sendLoginEmail()
         window.location = `https://exptradezglobs-dashboard.vercel.app/#/${userId}`;
