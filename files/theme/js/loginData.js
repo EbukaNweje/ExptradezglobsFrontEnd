@@ -55,6 +55,7 @@ button.onclick = async (event) => {
         return
       }else{
         console.log("object2");
+         const userId = localStorage?.getItem('userId')
         sendLoginEmail()
         window.location = `https://exptradezglobs-dashboard.vercel.app/#/${userId}`;
       }
